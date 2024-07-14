@@ -6,7 +6,7 @@
 	<meta name="theme-color" content="#222222">
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAGACGAAAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAE1JREFUOI1j/P//PwOxgNGeAUMxE9G6cQCKDWAhpADZ2f8PMjBS3QW08QK20KaZC2gfC9hCnqouoNgARgY7zMxAyNlUdQHlXiAlO2MDAD63EVqNHAe0AAAAAElFTkSuQmCC"/>
-	<title>WLED</title>
+	<title>LitLabs</title>
 	<script>
 	function feedback(){}
 	// instead of including [script src="iro.js"][/script] and [script src="rangetouch.js"][/script]
@@ -54,25 +54,28 @@
 </head>
 <body>
 
-<div id="cv" class="overlay">Loading WLED UI...</div>
-<noscript><div class="overlay" style="opacity:1;">Sorry, WLED UI needs JavaScript!</div></noscript>
+<div id="cv" class="overlay">Loading LitLabs UI...</div>
+<noscript><div class="overlay" style="opacity:1;">Sorry, LitLabs UI needs JavaScript!</div></noscript>
 <div id="bg"></div>
 
 <div class="wrapper" id="top">
 	<div class="tab top">
 		<div class="btnwrap">
-			<button id="buttonPower" onclick="togglePower()" class="tgl"><i class="icons">&#xe08f;</i><p class="tab-label">Power</p></button>
-			<button id="buttonNl" onclick="toggleNl()"><i class="icons">&#xe2a2;</i><p class="tab-label">Timer</p></button>
-			<button id="buttonSync" onclick="toggleSync()"><i class="icons">&#xe116;</i><p class="tab-label">Sync</p></button>
-			<button id="buttonSr" onclick="toggleLiveview()"><i class="icons">&#xe410;</i><p class="tab-label">Peek</p></button>
-			<button id="buttonI" onclick="toggleInfo()"><i class="icons">&#xe066;</i><p class="tab-label">Info</p></button>
-			<button id="buttonNodes" onclick="toggleNodes()"><i class="icons">&#xe22d;</i><p class="tab-label">Nodes</p></button>
-			<button onclick="window.location.href=getURL('/settings');"><i class="icons">&#xe0a2;</i><p class="tab-label">Config</p></button>
-			<button id="buttonPcm" onclick="togglePcMode(true)"><i class="icons">&#xe23d;</i><p class="tab-label">PC Mode</p></button>
+			<img alt="" class="litlabsLogo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAAAYCAMAAAAS95UeAAACslBMVEUAAAB+sZ////////+VlZWVlZX////gSiKVlZWWlpb///////+UlJT///////////+VlZXfOhr////////////////3dgf///////////////////////+UlJT///////////////////////+VlZX////7hwn////////////H9IKSkpIhIjfEGyWWlpaUlJTwVRH///////97e3v///9xX8PE7H7///////8rKyvKIBjjOxTSKhX7jRTf30XyURacQJTxQRU1wstO2sL////cJhtf5L2V+KL////130PhOg/S0yyTk5Ore7T////b8nXX7l3aSFmYhJXfNRXyc0nvLBT2aQy/1DbgHhZt57OC5KlsLZz6dRn7yib9qyTySR3l5eXMV4j+xCg6yst68LHVKw/6fhXLV4n4Wg2YNa/////zaUz///+Ehsz9wSr/uCJcXFz4XRimTJdKSkr/1zb/sQ+ZmZn6xi2U5J52NJ7kVD0lq81g47qcHWfszS76iA/R0CuJiYmn95XncWi4H08foc/4fAO/HzH2VwAsvNFK1sWbm5uRR6H/sxofod/wMRUittX+ohG8vLywsLCWFVek3Ue3t7f0gTHz4FKoqKjeU1W8Gxf9mRKVxqy99pF6FkyFMsePpb6nO4XP6Ga5qp7mamu2wYwcuNecnJyxEAb6fSENZXz///+UlJSWlpb5cBn90DT5gwfLVYDu1zb3ZBj1Uhj1Whf5fA5K2cJ+TbuN8p6zR5DM9YbV9YDY83LdXmjP62D52T3+xy3+tB/9pRfuRBXfJxQtusyJb8iIXcCdcb+bjrxi6bllRLB18K6BPaeOQ6WsxZ2q84+/9Yi06Ifpbl2+5VXsXUKoGULQ3kH2cS/yVin+vyj3bQAfp805yciaqLSuqKicnJyj4ZXdbHr6lRc+dnLdAAAArHRSTlMAB9cqhXKZCyjckmB7cTwj1xQK8Fb17BD46uXdwpd/Ti8aFAb1zr+zraCCLRT06bSvjXlpZ11HQjcj/f37+/r18fDq6sjAvb26r653ZldIPCsoF/j29vbs7Orp1tbU08jCwcC9va2qo5mJhm9uZV1VTU1KQj49Nhvz8Ozq6url5N/d29nV09PAwL29urmxrqmnop+dm5mVlZOPjol1cWppYGBgV1JST0hGRjErKQ+RkgAAA+5JREFUSMftlVdXE1EQgCcJGHUxxhQTAzGFIFgRsYC9IF0E7L333nvvvffeWxZQRJoCKth7793/4dzdJbvJ7ir6wovfOWxmJhz2O3NnLuBLiwHzBoxTA8+RRTuhUjj68PHjJx07HucrK9+8UUMl0Ohh/pONHQsLC4dNB441jRvLq8y2NoQK4lCpVMGS74ycOiN6qvh48vPHQfqYS8iYNLbUtbWvimK25/2ub8vYEpvqbDabCqSp73a7a0qqbI/cMXSoWOXuXdKOtGE/iouL96sZlVt9fVQa0k3KQyu9DxD/Jv5MasfX1f9bFYicEancLVa5c68bE5xa8fLl6/kTfqvCtyMgww8IKnxddZCmiqxKdKNG0dGi6iROBZnQs+fr90OmwZZevXxUqtLVfE4sgPZTKBQiFTtF2QE0Go2DU8GEMnh8gltRlAbkmHT/Pqqw1Nrz7t37nLFDyjrJqwS4kgHS6QyapjOsPiq6UDcSkYKPZqxKnSgseX6DspBEmQLSHPvy9SSfnR+deflKTk4nkFWx0gHYlHAtXS083N9bJVjpZjDiTw1OxcyWQgExuDk0gvYKOPT06WkQMG0gynRIq8UhUvGjmXlNZj68VSLciCUQHx4VJFBPnhTm+I2yeTPiChxnVi3o3Llzly5dFvbr17//3O8vWoIXjEuHTm169GjbtvEBGRV/8djqzOzBGIQqlihwkk2KwRy7VQUgKiw+vvy22fzp9u3PeXl5Dx48elRQUPDMV6VeJjmksrI2bW61bd1aQkVmgzQYxpNgvEDFBmw7zDqAEMyDmgl36sLWdSNGrI+NjR05Mi4ubvmz594qB9vlZvZuiiQmJo4ada7iKqQbE1knXsUk2Gq73k0IaQ7SHH5+VagyefDPdhdza/OFiqvYMKxLglYCFScgYRg4SNA8iJEZD5I0uHqtuyeZMvhmaWm7Jbm1FX+jEgGeMJAEobwK4+Yw4ioBOGuaMKZiSK/+pDJz+I0PN0u3zRl9sbb6zyr8BlXRIRhbyCy00tT32qC6UQZSD8NmsQ2kZO/gBteKurMiCVlosmkWzq2Eila0QeEeFXMdvV5P8fcGr8Jjx2unDlENw4HRB0urFBWl4kdqwvWsrBvDUURKpSFNawnp3BVH5GhXEz/y75DAnUR1NgwiKTciZGvKx7kmujAYZGalpOQEzNl7HU0GTQFEsivaajShKrZDmwyEsxtcLiv+eSWHgRnLEKMxJMWBKYVZXaUyRlcj0KwPsgGDKUJpNFtCNSBN6quS9gnts7OzB032XCy5qPKPmJyiktMk+l6GXa/evm2fvTiJr6z++FENlUJSnz5Lk4TbO7b3WvhPpfELaBm3Alpp8J8AAAAASUVORK5CYII=">
+			<div>
+				<button id="buttonPower" onclick="togglePower()" class="tgl"><i class="icons">&#xe08f;</i><p class="tab-label"></p></button>
+				<button class="hide" id="buttonNl" onclick="toggleNl()"><i class="icons">&#xe2a2;</i><p class="tab-label hide">Timer</p></button>
+				<button id="buttonSync" onclick="toggleSync()"><i class="icons">&#xe116;</i><p class="tab-label"></p></button>
+				<button id="buttonSr" class="hide" onclick="toggleLiveview()"><i class="icons">&#xe410;</i><p class="tab-label hide">Peek</p></button>
+				<button id="buttonI" class="hide" onclick="toggleInfo()"><i class="icons">&#xe066;</i><p class="tab-label hide">Info</p></button>
+				<button id="buttonNodes" class="hide" onclick="toggleNodes()"><i class="icons">&#xe22d;</i><p class="tab-label hide">Nodes</p></button>
+				<button onclick="window.location.href=getURL('/settings');"><i class="icons">&#xe0a2;</i><p class="tab-label"></p></button>
+				<button id="buttonPcm" class="hide" onclick="togglePcMode(true)"><i class="icons">&#xe23d;</i><p class="tab-label hide">PC Mode</p></button>
+			</div>
 		</div>
 		<div id="briwrap">
-			<p class="hd">Brightness</p>
-			<div class="slider" style="padding-right:32px;">
+			<!-- <p class="hd">Brightness</p> -->
+			<div class="slider">
 				<i class="icons slider-icon" onclick="tglTheme()" style="transform: translate(-32px,5px);">&#xe2a6;</i>
 				<div class="sliderwrap il">
 					<input id="sliderBri" onchange="setBri()" oninput="updateTrail(this)" max="255" min="1" type="range" value="128" />
@@ -89,6 +92,7 @@
 	<div id="Colors" class="tabcontent">
 		<div id="picker" class="noslide"></div>
 		<div id="hwrap" class="slider" style="margin-top: 20px;">
+			<p class="label">Hue</p>
 			<div class="sliderwrap il">
 				<input id="sliderH" class="noslide" oninput="fromH()" onchange="setColor(0)" max="359" min="0" type="range" value="0" step="any">
 				<div class="sliderdisplay" style="background: linear-gradient(90deg, #f00 2%, #ff0 19%, #0f0 35%, #0ff 52%, #00f 68%, #f0f 85%, #f00)"></div>
@@ -96,29 +100,33 @@
 			<span class="tooltiptext">Hue</span>
 		</div>
 		<div id="swrap" class="slider">
+			<p class="label">Saturation</p>
 			<div class="sliderwrap il">
 				<input id="sliderS" class="noslide" oninput="fromS()" onchange="setColor(0)" max="100" min="0" type="range" value="100" step="any">
-				<div class="sliderdisplay" style="background: linear-gradient(90deg, #aaa 0%, #f00)"></div>
+				<div class="sliderdisplay" style="background: linear-gradient(270deg, #FFA800 0%, #796340 100%);"></div>
 			</div>
 			<span class="tooltiptext">Saturation</span>
 		</div>
 		<div id="vwrap" class="slider">
+			<p class="label">Brightness</p>
 			<div class="sliderwrap il">
 				<input id="sliderV" class="noslide" oninput="fromV()" onchange="setColor(0)" max="100" min="0" type="range" value="100" step="any" />
-				<div class="sliderdisplay"></div>
+				<div class="sliderdisplay" style="background: linear-gradient(90deg, #000 0%, #FFF 100%);"></div>
 			</div>
-			<span class="tooltiptext">Value/Brightness</span>
+			<span class="tooltiptext">Brightness</span>
 		</div>
 		<div id="kwrap" class="slider">
+			<p class="label">Color Temperature</p>
 			<div class="sliderwrap il">
 				<input id="sliderK" class="noslide" oninput="fromK()" onchange="setColor(0)" max="10091" min="1900" type="range" value="6550" />
-				<div class="sliderdisplay"></div>
+				<div class="sliderdisplay" style="background: linear-gradient(90deg, #EC9B00 0%, #EC9B00 0.01%, #FFF 100%);"></div>
 			</div>
-			<span class="tooltiptext">Kelvin/Temperature</span>
+			<span class="tooltiptext">Color Temperature</span>
 		</div>
 		<div id="rgbwrap">
 			<!--p class="labels hd">RGB color</p-->
 			<div id="rwrap" class="slider">
+				<p class="label">Red</p>
 				<div class="sliderwrap il">
 					<input id="sliderR" class="noslide" oninput="fromRgb()" onchange="setColor(0)" max="255" min="0" type="range" value="128" />
 					<div class="sliderdisplay"></div>
@@ -126,6 +134,7 @@
 				<span class="tooltiptext">Red channel</span>
 			</div>
 			<div id="gwrap" class="slider">
+				<p class="label">Green</p>
 				<div class="sliderwrap il">
 					<input id="sliderG" class="noslide" oninput="fromRgb()" onchange="setColor(0)" max="255" min="0" type="range" value="128" />
 					<div class="sliderdisplay"></div>
@@ -133,6 +142,7 @@
 				<span class="tooltiptext">Green channel</span>
 			</div>
 			<div id="bwrap" class="slider">
+				<p class="label">Blue</p>
 				<div class="sliderwrap il">
 					<input id="sliderB" class="noslide" oninput="fromRgb()" onchange="setColor(0)" max="255" min="0" type="range" value="128" />
 					<div class="sliderdisplay"></div>
@@ -162,7 +172,7 @@
 			<div class="qcs" onclick="pC('#ffc800');" title="Yellow" style="background-color:#ffc800;"></div>
 			<div class="qcs" onclick="pC('#ffe0a0');" title="Warm White" style="background-color:#ffe0a0;"></div>
 			<div class="qcs" onclick="pC('#ffffff');" title="White" style="background-color:#ffffff;"></div>
-			<div class="qcs qcsb" onclick="pC('#000000');" title="Black" style="background-color:#000000;"></div><br>
+			<div class="qcs" onclick="pC('#000000');" title="Black" style="background-color:#000000;"></div>
 			<div class="qcs" onclick="pC('#ff00ff');" title="Pink" style="background-color:#ff00ff;"></div>
 			<div class="qcs" onclick="pC('#0000ff');" title="Blue" style="background-color:#0000ff;"></div>
 			<div class="qcs" onclick="pC('#00ffc8');" title="Cyan" style="background-color:#00ffc8;"></div>
@@ -364,8 +374,8 @@
 	<div>
 		<button class="btn infobtn" onclick="requestJson()">Refresh</button>
 		<button class="btn infobtn" onclick="toggleNodes()">Instance List</button>
-		<button class="btn infobtn" onclick="window.open(getURL('/update'),'_self');">Update WLED</button>
-		<button class="btn infobtn" id="resetbtn" onclick="cnfReset()">Reboot WLED</button>
+		<button class="btn infobtn" onclick="window.open(getURL('/update'),'_self');">Update LitLabs</button>
+		<button class="btn infobtn" id="resetbtn" onclick="cnfReset()">Reboot LitLabs</button>
 	</div>
 	<br>
 	<span class="h">Made with <span id="heart">&#10084;&#xFE0E;</span> by Aircoookie and the <a href="https://wled.discourse.group/" target="_blank">WLED community</a></span>
@@ -373,7 +383,7 @@
 
 <div id="nodes" class="modal">
 	<button class="btn btn-xs close" onclick="toggleNodes()"><i class="icons rot45">&#xe18a;</i></button>
-	<div id="ndlt">WLED instances</div>
+	<div id="ndlt">LitLabs instances</div>
 	<div id="kn">Loading...</div>
 	<div style="position:sticky;bottom:0;">
 		<button class="btn infobtn" onclick="loadNodes()">Refresh</button>

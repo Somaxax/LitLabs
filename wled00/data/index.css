@@ -4,7 +4,7 @@
 }
 
 :root {
-	--c-1: #111;
+	--c-1: #1B1B1B !important;
 	--c-f: #fff;
 	--c-2: #222;
 	--c-3: #333;
@@ -17,12 +17,14 @@
 	--c-e: #eee;
 	--c-d: #ddd;
 	--c-r: #c32;
-	--c-g: #2c1;
+	--c-g: #33A938 !important;
 	--c-l: #48a;
 	--c-y: #a90;
+	--c-hover: #2E3032 !important;
+	--c-input: #282A2C !important;
 	--t-b: 0.5;
 	--c-o: rgba(34, 34, 34, 0.9);
-	--c-tb : rgba(34, 34, 34, var(--t-b));
+	--c-tb : rgba(40, 42, 44, var(--t-b)) !important;
 	--c-tba: rgba(102, 102, 102, var(--t-b));
 	--c-tbh: rgba(51, 51, 51, var(--t-b));
 	/*following are internal*/
@@ -1464,6 +1466,120 @@ TD .checkmark, TD .radiomark {
 	background: var(--c-sbh);
 }
 
+
+
+
+
+.btnwrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 15px;
+	height: 60px;
+	border-bottom: 1px solid #393A3B;
+	
+}
+
+.top #briwrap {
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 24px;
+}
+
+
+.litlabsLogo {
+	width: 150px;
+}
+
+.tab div button {
+	width: 37px;
+	height: 37px;
+	min-width: 37px;
+	margin-right: 15px;
+}
+
+.tab div button.active,
+.tab div button:hover {
+	border-radius: 50px;
+	background: var(--c-hover);
+	color: var(--c-g);
+}
+
+.tabcontent {
+	padding-top: 30px;
+}
+
+.label {
+	font-weight: 600;
+	text-align: left;
+	font-size: 0.8em;
+	margin-bottom: -5px;
+}
+
+#segutil, #segutil2, #segcont, #putil, #pcont, #pql, #fx, #palw, .fnd {
+	max-width: 90vw;
+	display: block;
+	margin: 0 auto;
+}
+.lstI,
+.fnd input[type="text"] {
+	border-radius: 8px;
+	border: none;
+	background-color: var(--c-input);
+	display: flex;
+	padding: 16px 40px;
+}
+
+.clear-icon,
+.search-icon {
+	top: 16px;
+}
+
+.top button {
+	padding: 0px;
+}
+.top .icons {
+	margin: 0px;
+}
+
+.qcs {
+	position: relative;
+}
+.qcs::after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: var(--c-1);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50px;
+}
+
+#buttonNl {
+	display: none !important;
+}
+
+
+.hide {
+	display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+
 @media not all and (hover: none) {
 	.sliderwrap:hover + output.sliderbubble {
 		visibility: visible;
@@ -1514,6 +1630,16 @@ TD .checkmark, TD .radiomark {
 		margin: 0 auto !important;
 		float: none;
 		display: inline-block;
+	}
+	.slider {
+		width: 90vw;
+	}
+	.top .slider {
+		width: 85vw;
+	}
+	.sliderwrap {
+		width: 100%;
+		max-width: 100%;
 	}
 	.hd {
 		display: none !important;
@@ -1578,4 +1704,8 @@ TD .checkmark, TD .radiomark {
 		text-overflow: ellipsis;
 		overflow-x: clip;
 	}
+}
+
+#buttonPcm {
+	display: none;
 }
